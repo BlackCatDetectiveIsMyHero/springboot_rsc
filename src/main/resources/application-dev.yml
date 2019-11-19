@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/springboot_rsc?serverTimezone=UTC
+    username: root
+    password: 123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    show-sql: true
+    database: mysql
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect #不加此配置默认引擎为MyISAM
+
+limit:
+  startingWeight: 3
+  pricePerKilogram: 5
